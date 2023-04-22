@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base</title>
+</head>
+<body>
+    <div id="navbar">
+        <h2>The Reading Maze Nav Bar <a href="index.jinja"></a></h2>
+    </div>
+{% block content%}
+<header>
+        <div id="logo">The Reading <span>Maze</span></div>   
+        <nav class="main-menu-nav">
+            <ul>
+                <li class="list-items"><a href="http://localhost:4999/home">Home</a></li>
+                <li><a href="http://localhost:4999/display_all_books">Display All Books</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+</header>
+{% endblock %}
+
+
+
+
+    
+</body>
+</html>

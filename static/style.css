@@ -34,6 +34,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: rgb(255, 255, 255);
 }
 
 nav ul {
@@ -47,12 +48,47 @@ li {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    cursor: pointer;
 }
 
 li:hover {
     color: rgb(180, 184, 183);
     cursor: pointer;
+}
+
+a {
+    color:rgb(255, 255, 255);
+    list-style: none; /* not sure why the underline isn't disappearing */
+}
+
+a:hover {
+    color:rgb(24, 157, 132);
+}
+
+/* td (entries in table) */
+
+
+th {
+    /* margin: 30px; */
+    /* padding: 10px; */
+    color:rgb(24, 157, 132);
+}
+
+td {
+    
+    margin: 0;
+    padding: 20px;
+} 
+
+table {
+    display: flex;
+    padding: 40px;
+    margin: 20px;
+}
+
+.wee-heading {
+    padding: 20px;
+    margin: 20px;
+    font-size: 30px;
 }
 
 

@@ -8,20 +8,22 @@
     <title>Library Lab - Home</title>
 </head>
 <body>
+
 {# navbar menu main - sounds odd but hopefully will improve this later #}
 <header>
         <div id="logo">The Reading <span>Maze</span></div>   
         <nav class="main-menu-nav">
             <ul>
-                <li class="list-items"><a href="">Home</a></li>
-                <li><a href="">Your Library Account</a></li>
+                <li class="list-items"><a href="http://localhost:4999/home">Home</a></li>
+                <li><a href="http://localhost:4999/display_all_books">Display All Books</a></li>
                 <li><a href="">Contact</a></li>
             </ul>
         </nav>
 </header>{# need to figure out how to re-use this base on all pages #}
+
 {# navbar menu - I want to do a vertical menu if I can #}
 {# index page view #}
-<h1>Welcome to the Reading Maze Library!</h1>
+<h2>Welcome to the Reading Maze Library!</h2>
 
 <h2>Here are some popular picks:</h2>
 <img src="/static/b1_the_third_policeman_cover.jpg" alt="the_third_policeman_cover">
@@ -30,14 +32,6 @@
 
 
 {# display all books func page  #}
-<div>
-    {% for book in books_list %}
-    <ul>
-        <li>"{{ book.title }}" is a book by {{ book.author }}. The genre the book is categorised in is "{{ book.genre }}".</li>
-    </ul>
-    </p>
-{% endfor %}
-</div>
 
 
 {# display specific book via index maybe #}
@@ -47,7 +41,5 @@
 
 
 {# remove a specific book #}
-
-</body>   
 </body>
 </html>
