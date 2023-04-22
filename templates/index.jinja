@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Library Lab - Home</title>
+</head>
+<body>
+{# navbar menu main - sounds odd but hopefully will improve this later #}
+<header>
+        <div id="logo">The Reading <span>Maze</span></div>   
+        <nav class="main-menu-nav">
+            <ul>
+                <li class="list-items"><a href="">Home</a></li>
+                <li><a href="">Your Library Account</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+</header>{# need to figure out how to re-use this base on all pages #}
+{# navbar menu - I want to do a vertical menu if I can #}
+{# index page view #}
+<h1>Welcome to the Reading Maze Library!</h1>
+
+<h2>Here are some popular picks:</h2>
+<img src="/static/b1_the_third_policeman_cover.jpg" alt="the_third_policeman_cover">
+<img src="/static/b2_in_cold_blood_cover.png" alt="in_cold_blood_cover">
+<img src="/static/b3_brave_new_world_cover.jpg" alt="brave_new_world_cover">
+
+
+{# display all books func page  #}
+<div>
+    {% for book in books_list %}
+    <ul>
+        <li>"{{ book.title }}" is a book by {{ book.author }}. The genre the book is categorised in is "{{ book.genre }}".</li>
+    </ul>
+    </p>
+{% endfor %}
+</div>
+
+
+{# display specific book via index maybe #}
+
+
+{# add a new book - create a wee form with inputs and textarea (I'll add a description property later to the Book class) #}
+
+
+{# remove a specific book #}
+
+</body>   
+</body>
+</html>

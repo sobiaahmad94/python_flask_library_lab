@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Library Lab - All Books</title>
+</head>
+<body>
+<nav class="activity-menu-nav">
+    <ul>
+        <li><a href=""></a>Home</li>
+        <li><a href=""></a>All Books Available</li>
+        <li><a href=""></a>Add New Book</li>
+        <li><a href=""></a>Delete Book</li>
+        <li><a href=""></a>Check In Book</li>
+        <li><a href=""></a>Check Out Book</li>
+        <li><a href=""></a>Contact</li>
+    </ul>
+</nav>
+{# index page view #}
+<h1>Here's a list of all of our books:</h1>
+
+                <li><a href="">Your Library Account</a></li>
+
+
+{# display all books func page - for loop used to display all books #}
+<div>
+    {% for book in books_list %}
+    <ul>
+        <li>"{{ book.title }}" is a book by {{ book.author }}. The genre the book is categorised in is "{{ book.genre }}".</li>
+    </ul>
+    </p>
+{% endfor %}
+</div>
+
+
+{# display specific book via index maybe #}
+
+
+{# add a new book - create a wee form with inputs and textarea (I'll add a description property later to the Book class) #}
+
+
+{# remove a specific book #}
+
+</body>   
+</body>
+</html>
