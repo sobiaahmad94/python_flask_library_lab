@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Add New Page</title>
+</head>
+<body>
+{# navbar menu main - sounds odd but hopefully will improve this later #}
+<header>
+        <div id="logo">The Reading <span>Maze</span><a href="http://localhost:4999/home"></a></div>   
+        <nav class="main-menu-nav">
+            <ul>
+                <li class="list-items"><a href="http://localhost:4999/home">Home</a></li>
+                <li><a href="http://localhost:4999/display_all_books">Display All Books</a></li>
+                <li><a href="http://localhost:4999/add_new_book">Add New Book</a></li>
+
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+</header>{# need to figure out how to re-use this base on all pages #}
+
+<h2 class="wee-header">Add New Book</h2>
+{# <form class="add-new-book-form" method="POST" action="/add_new_book">
+    <label for="book-title">Book Title:</label>
+    <input type="text" name="title" alt="book-title-input-box" required> 
+
+
+    <label for="book-author">Author:</label>
+    <input type="text" name="author" alt="book-author-input-box" required>
+
+    <label for="book-genre">Genre:</label>
+    <input type="text" name="genre" alt="book-genre-box">
+    
+    <label for="add-book-button"></label>
+    <input class="add-book-button" type="submit" value="Add New Book" alt="add-new-book-button">
+</form> #}
+<form class="add-new-book-form" method="POST" action="/add_new_book">
+    <label for="book-title">Book Title:</label>
+    <input type="text" name="title" alt="book-title-input-box" required>
+
+    <label for="book-author">Author:</label>
+    <input type="text" name="author" alt="book-author-input-box" required>
+
+    <label for="book-genre">Genre:</label>
+    <input type="text" name="genre" alt="book-genre-box">
+
+    <input class="add-book-button" type="submit" value="Add New Book" alt="add-new-book-button">
+</form>
+
+    
+</body>
+</html>

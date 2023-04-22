@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>Library Lab - Home</title>
+    <title>The Reading Maze - Home</title>
 </head>
 <body>
 
 {# navbar menu main - sounds odd but hopefully will improve this later #}
 <header>
-        <div id="logo">The Reading <span>Maze</span></div>   
+        <div id="logo">The Reading <span>Maze</span><a href="http://localhost:4999/home"></a></div>   
         <nav class="main-menu-nav">
             <ul>
                 <li class="list-items"><a href="http://localhost:4999/home">Home</a></li>
                 <li><a href="http://localhost:4999/display_all_books">Display All Books</a></li>
+                <li><a href="http://localhost:4999/add_new_book">Add New Book</a></li>
                 <li><a href="">Contact</a></li>
             </ul>
         </nav>

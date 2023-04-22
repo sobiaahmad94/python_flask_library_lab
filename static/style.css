@@ -91,5 +91,37 @@ table {
     font-size: 30px;
 }
 
+form {
+    font-size: 20px;
+    padding: 20px;
+}
+
+form >label {
+    margin-top: 90px;
+}
+
+form >input {
+    color: rgb(24, 157, 132);
+    display: flex;
+    align-content: space-between;
+    font-size: 20px;
+}
+
+.add-book-button {
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 10px;
+    padding: 12px;
+    cursor: pointer;
+    background-color: rgb(24, 157, 132);
+    color:rgb(255, 255, 255);
+    font-size: 12px;
+}
+
+.add-book-button:hover {
+    color: rgb(24, 157, 132);
+    background-color:rgb(255, 255, 255);
+}
+
 
 
