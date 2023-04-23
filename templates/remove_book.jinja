@@ -28,7 +28,7 @@
     <form class="remove-book-form" method="POST" action="{{ url_for('remove_book')}}">
 
     <label for="book_id">Book ID:</label>
-    <input type="text" name="book_id" required alt="book-id-input-box">
+    <input type="text" name="book_id" alt="book-id-input-box" required>
     <br>
     <button class="remove-book-button" type="submit">Remove Book</button>
         <button href="{{ url_for('display_all_books')}}" class="remove-book-button" type="submit">Cancel</button>
