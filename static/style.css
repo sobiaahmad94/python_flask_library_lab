@@ -1,5 +1,7 @@
+/* fonts from Google */
 @import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100&display=swap');
 
+/* all selectors */
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: rgb(25, 25, 25);
@@ -37,6 +39,8 @@ header {
     color: rgb(255, 255, 255);
 }
 
+/* navbar */
+
 nav ul {
     display: flex;
     gap: 2rem;
@@ -64,12 +68,19 @@ a:hover {
     color:rgb(24, 157, 132);
 }
 
-/* td (entries in table) */
+/* home photos as they're all unequal sizes rn */
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 320px;
+}
+
+
+/* table and td etc (entries in table) */
 
 
 th {
-    /* margin: 30px; */
-    /* padding: 10px; */
     color:rgb(24, 157, 132);
 }
 
@@ -85,11 +96,19 @@ table {
     margin: 20px;
 }
 
-.wee-heading {
+/* the wee headings, my class broke somewhere so I opted for using the h2 instead */
+
+h2 {
     padding: 20px;
-    margin: 20px;
+    margin: 10px;
     font-size: 30px;
 }
+
+h3 {
+    color:rgb(24, 157, 132);
+}
+
+/* forms - applies to the add new book form and the remove book form */
 
 form {
     font-size: 20px;
@@ -107,7 +126,7 @@ form >input {
     font-size: 20px;
 }
 
-.add-book-button {
+.add-book-button, .remove-book-button, button {
     text-transform: uppercase;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 10px;
@@ -122,6 +141,19 @@ form >input {
     color: rgb(24, 157, 132);
     background-color:rgb(255, 255, 255);
 }
+
+.remove-book-button:hover, button:hover {
+    color: rgb(255, 255, 255);
+    background-color:rgb(215, 67, 67);
+}
+
+/* any general buttons as I'd like them to be the same except, I just want the add/remove buttons to be a bit bigger */
+button {
+    padding: 10px;
+    font-size: 10px;
+}
+
+
 
 
 

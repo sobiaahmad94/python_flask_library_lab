@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 
 # render_template is so I can render the jinja file
 # request is so I can do POST and GET requests

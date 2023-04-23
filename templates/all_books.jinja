@@ -8,6 +8,7 @@
     <title>Library Lab - All Books</title>
 </head>
 <body>
+{# navbar menu main - sounds odd but hopefully will improve this later #}
 <header>
         <div id="logo">The Reading <span>Maze</span><a href="http://localhost:4999/home"></a></div>   
         <nav class="main-menu-nav">
@@ -15,6 +16,9 @@
                 <li class="list-items"><a href="http://localhost:4999/home">Home</a></li>
                 <li><a href="http://localhost:4999/display_all_books">Display All Books</a></li>
                 <li><a href="http://localhost:4999/add_new_book">Add New Book</a></li>
+                <li><a href="http://localhost:4999/remove_book">Remove Book</a></li>
+                <li><a href="">Check In</a></li>
+                <li><a href="">Check Out</a></li>
                 <li><a href="">Contact</a></li>
             </ul>
         </nav>
@@ -25,7 +29,7 @@
         <li><a href="http://localhost:4999/home"></a>Home</li>
         <li><a href="https://localhost:4999/display_all_books"></a>Display All Books</li>
         <li><a href="http://localhost:4999/add_new_book"></a>Add New Book</li>
-        <li><a href=""></a>Delete Book</li>
+        <li><a href=""></a>Remove Book</li>
         <li><a href=""></a>Check In Book</li>
         <li><a href=""></a>Check Out Book</li>
         <li><a href=""></a>Contact</li>
@@ -38,19 +42,21 @@
         <th class="table-labels">Title:</th>
         <th>Author:</th>
         <th>Genre:</th>
+        <th>Book ID:</th>
 
         <tr>
         <td>"{{ book.title }}"</td>
         <td>{{ book.author }}</td>
         <td>"{{ book.genre }}"</td>
+        <td>{{ book.book_id }}</td>
+        <button type="hidden" href="{{ url_for('remove_book', book_id=book.book_id) }}">Remove This Book</button> {# what I tried to do here didn't work the way I wanted so I'll try again later #}
         </tr>
     </table>
 {% endfor %}
 </nav>
 <nav>
-                <li><a href="http://localhost:4999/home">Click here to return to <b>>Home</b></a></li>
+    <li><a href="http://localhost:4999/home">Click here to return to <b>>Home</b></a></li>
 </nav>
-
 </main>
 
 
