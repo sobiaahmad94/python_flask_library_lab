@@ -82,6 +82,8 @@ img {
 
 th {
     color:rgb(24, 157, 132);
+    margin: 0;
+    padding: 20px;
 }
 
 td {
@@ -98,7 +100,7 @@ table {
 
 /* the wee headings, my class broke somewhere so I opted for using the h2 instead */
 
-h2 {
+.wee_heading {
     display: flex;
     align-items: left;
     padding: 20px;
@@ -126,6 +128,7 @@ form >input {
     display: flex;
     align-content: space-between;
     font-size: 20px;
+    outline: rgb(24, 157, 132); /* not working so will return to this line */
 }
 
 .add-book-button, .remove-book-button, button {

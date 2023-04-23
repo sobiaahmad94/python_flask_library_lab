@@ -35,6 +35,15 @@
         <li><a href="http://localhost:4999/contact">Contact</a></li>
     </ul>
 
+{# display all books func page - for loop used to display all books #}
+{# tried to just do sentences but then realised a table looks better, main is more specific than a div}
+{# <div class="books-list">
+    {% for book in books_list %}
+    <ul>
+        <li>"{{ book.title }}" is a book by {{ book.author }}. The genre the book is categorised in is "{{ book.genre }}".</li>
+    </ul>
+    </p>
+{% endfor %} #}
 <main>
     <h2 class="wee-heading">Here is a list of all of our available books:</h2>
 {% for book in books_list %}
@@ -60,14 +69,6 @@
 </main>
 
 
-{# display all books func page - for loop used to display all books #}
-{# <div class="books-list">
-    {% for book in books_list %}
-    <ul>
-        <li>"{{ book.title }}" is a book by {{ book.author }}. The genre the book is categorised in is "{{ book.genre }}".</li>
-    </ul>
-    </p>
-{% endfor %} #}
 
 
 {# display specific book via index maybe #}
