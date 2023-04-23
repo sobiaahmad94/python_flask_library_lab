@@ -99,6 +99,8 @@ table {
 /* the wee headings, my class broke somewhere so I opted for using the h2 instead */
 
 h2 {
+    display: flex;
+    align-items: left;
     padding: 20px;
     margin: 10px;
     font-size: 30px;

@@ -6,12 +6,12 @@ from models.books import *
 from models.book import *
 
 # homepage view
-@app.route('/home')
+@app.route("/home")
 def index():
     return render_template("index.jinja", title = "Home")
 
 # displaying all books available view
-@app.route('/display_all_books')
+@app.route("/display_all_books")
 def display_all_books():
     # all_books = books_list
     return render_template("all_books.jinja", title = "Display All Books", books_list = books_list)
@@ -27,28 +27,29 @@ def display_all_books():
 #     return render_template("add_new_book.jinja", books_list = books_list)
 
 
-# I used this resource to sort out a 405 error I kept getting: https://stackoverflow.com/questions/42018603/handling-get-and-post-in-same-flask-view
+# I used this resource to sort out a 405 error I kept getting
 # adding a new book to books_list page
-@app.route('/add_new_book', methods=["GET","POST"])
+@app.route("/add_new_book", methods=["GET","POST"])
 def add_new_book():
     # I want to use POST so I can take info entered in the input boxes and add them to the books list
     if request.method == "POST":
-        new_book = Book(request.form['title'], request.form['author'], request.form['genre'], request.form['book_id'])
+        new_book = Book(request.form["title"], request.form["author"], request.form["genre"], request.form["book_id"])
         # I'm creating a new object, grabbing the title, author and genre but I want to try to change this a bit 
     # appended the new_book variable to the books_list list
         books_list.append(new_book)
-        return redirect(url_for('display_all_books'))
+        return redirect(url_for("display_all_books"))
     # getting the template and setting books_list to books_list variable
     return render_template("add_new_book.jinja", books_list = books_list)
 
 # function that figures out the book_id to determine whether to exclude or include it in the list first of all might've been better
 
+# removing a book function
 # I had issues with GET and POST working so I found a resource that said you could put multiple methods together but do a conditional
-@app.route('/remove_book', methods=["GET", "POST"])
+@app.route("/remove_book", methods=["GET", "POST"])
 def remove_book():
     if request.method == "POST":
         # book_id variable set
-        book_id = request.form['book_id']
+        book_id = request.form["book_id"]
         # for loop to go through all of the books_list books and see if the book_id matches the variable book_id (so if what id is entered matches what's on the display_all_books page)
         for book in books_list:
             # if the id entered matches an id that is in the books_list list, then that specific book will be removed
@@ -58,6 +59,12 @@ def remove_book():
                 books_list.remove(book)
                 break
             # I read about url_for so I imported it, so it takes us back to the display all books table page
-        return redirect(url_for('display_all_books'))
+        return redirect(url_for("display_all_books"))
     # this is to take the remove_book template and use it, I don't think I need the title here but I just put it here
     return render_template("remove_book.jinja", title="Remove Book")
+
+# contact page
+@app.route("/contact")
+def contact_page():
+    return render_template("contact.jinja", title="Contact Page")
+# I wrote some stuff I hope to do in the future in the template as I have a few ideas :)
